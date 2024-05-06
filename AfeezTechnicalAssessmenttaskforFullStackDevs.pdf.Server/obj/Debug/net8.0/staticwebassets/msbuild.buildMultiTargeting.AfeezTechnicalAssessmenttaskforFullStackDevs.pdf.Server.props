@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\AfeezTechnicalAssessmenttaskforFullStackDevs.pdf.Server.props" />
+</Project>

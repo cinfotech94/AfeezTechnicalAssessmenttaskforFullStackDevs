@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "+srrdB4leapHmeKNYJDPuVYZEiQ3DTRDj6Ra4iD8cm0=",
+  "Source": "AfeezTechnicalAssessmenttaskforFullStackDevs.pdf.Server",
+  "BasePath": "_content/AfeezTechnicalAssessmenttaskforFullStackDevs.pdf.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\DECAGON\\Documents\\Task\\AfeezTechnicalAssessmenttaskforFullStackDevs.pdf\\afeeztechnicalassessmenttaskforfullstackdevs.pdf.client\\afeeztechnicalassessmenttaskforfullstackdevs.pdf.client.esproj",
+      "Version": 2,
+      "Source": "afeeztechnicalassessmenttaskforfullstackdevs.pdf.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
