@@ -12,7 +12,7 @@ namespace AfeezTechnicalAssessmenttaskforFullStackDevs.pdf.Server.Models.Request
         public string Title { get; set; }
         public string? Year { get; set; }
         [JsonConverter(typeof(JsonStringEnumConverter))]
-        public GetType? Type { get; set; } = Enums.GetType.movie;
+        public GetType? Type { get; set; } = Enums.GetType.Option1;
         public string? DataType { get; set; }
         private int? _Page;
             public string? Page

@@ -16,7 +16,7 @@ namespace AfeezTechnicalAssessmenttaskforFullStackDevs.pdf.Server.Models.Request
 
         [JsonConverter(typeof(JsonStringEnumConverter))]
         
-        public GetType? Type { get; set; } = Enums.GetType.movie;
+        public GetType? Type { get; set; } = Enums.GetType.Option1;
 
         public string? dataType { get; set; }
         
@@ -26,7 +26,7 @@ namespace AfeezTechnicalAssessmenttaskforFullStackDevs.pdf.Server.Models.Request
 
         [JsonConverter(typeof(JsonStringEnumConverter))]
         
-        public GetPlot? shortfullplot { get; set; } = Enums.GetPlot.Short;
+        public GetPlot? shortfullplot { get; set; } = Enums.GetPlot.Option1;
 
         public GetMDBapi()
         {

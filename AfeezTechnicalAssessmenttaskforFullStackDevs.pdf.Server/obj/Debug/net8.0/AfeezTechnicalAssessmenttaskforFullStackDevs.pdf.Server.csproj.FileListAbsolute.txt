@@ -34,3 +34,4 @@ C:\Users\DECAGON\Documents\Task\AfeezTechnicalAssessmenttaskforFullStackDevs.pdf
 C:\Users\DECAGON\Documents\Task\AfeezTechnicalAssessmenttaskforFullStackDevs.pdf\AfeezTechnicalAssessmenttaskforFullStackDevs.pdf.Server\obj\Debug\net8.0\AfeezTechnicalAssessmenttaskforFullStackDevs.pdf.Server.genruntimeconfig.cache
 C:\Users\DECAGON\Documents\Task\AfeezTechnicalAssessmenttaskforFullStackDevs.pdf\AfeezTechnicalAssessmenttaskforFullStackDevs.pdf.Server\obj\Debug\net8.0\ref\AfeezTechnicalAssessmenttaskforFullStackDevs.pdf.Server.dll
 C:\Users\DECAGON\Documents\Task\AfeezTechnicalAssessmenttaskforFullStackDevs.pdf\AfeezTechnicalAssessmenttaskforFullStackDevs.pdf.Server\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\DECAGON\Documents\Task\AfeezTechnicalAssessmenttaskforFullStackDevs.pdf\AfeezTechnicalAssessmenttaskforFullStackDevs.pdf.Server\obj\Debug\net8.0\AfeezTechnicalAssessmenttaskforFullStackDevs.pdf.Server.sourcelink.json

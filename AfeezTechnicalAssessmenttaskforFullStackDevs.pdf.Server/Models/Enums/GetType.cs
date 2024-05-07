@@ -2,6 +2,6 @@
 {
     public enum GetType
     {
-        movie, series, episode
+        Option1,movie, series, episode
     }
 }

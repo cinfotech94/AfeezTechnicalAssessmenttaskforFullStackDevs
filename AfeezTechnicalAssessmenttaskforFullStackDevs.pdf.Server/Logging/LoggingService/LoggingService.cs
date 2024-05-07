@@ -7,27 +7,42 @@ namespace AfeezTechnicalAssessmenttaskforFullStackDevs.pdf.Server.LoggingFiles.L
 {
     public class LoggingService : ILoggingService
     {
-        private readonly IConfiguration _configuration;
+        private readonly IWebHostEnvironment _env;
         private readonly string _logFilePath;
 
-        public LoggingService(IConfiguration configuration)
+        public LoggingService(IWebHostEnvironment env)
         {
-            _logFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Logging", "logFiles", "error.log");
+            _env = env;
         }
 
         public void LogError(LoggingModel loggingModel)
         {
             try
             {
-                using (StreamWriter writer = new StreamWriter(_logFilePath, true))
+                string webRootPath = _env?.ContentRootPath; // Null-conditional operator added
+                if (webRootPath != null)
                 {
-                    writer.WriteLine($"Id:{loggingModel.LogId} -ServiceName:{loggingModel.ServiceName}-DateTimeNow: {loggingModel.LogTime} - Error: {loggingModel.ErrorMessage}");
+                    string logFile = Path.Combine(webRootPath, "Logging", "LogFiles", "Error.log");
+
+                    // Ensure that the directory exists before writing to the file
+                    Directory.CreateDirectory(Path.GetDirectoryName(logFile));
+
+                    // Use using statement to ensure that the StreamWriter is properly disposed
+                    using (StreamWriter writer = new StreamWriter(logFile, true))
+                    {
+                        writer.WriteLine($"Id:{loggingModel.LogId} - ServiceName:{loggingModel.ServiceName} - DateTimeNow: {loggingModel.LogTime} - Error: {loggingModel.ErrorMessage}");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Web root path is null.");
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error logging to file: {ex.Message}");
+                Console.WriteLine($"Error: {ex.Message}");
             }
         }
     }
 }
+

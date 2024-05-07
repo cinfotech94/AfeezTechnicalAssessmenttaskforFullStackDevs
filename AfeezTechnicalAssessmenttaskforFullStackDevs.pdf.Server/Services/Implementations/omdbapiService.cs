@@ -64,7 +64,6 @@ namespace AfeezTechnicalAssessmenttaskforFullStackDevs.pdf.Server.Services.Imple
                 return finalResponse;
             }
         }
-
         public async Task<OmdbGetsDataRoot> GetMovieDetails(string GetMovieString)
         { 
 

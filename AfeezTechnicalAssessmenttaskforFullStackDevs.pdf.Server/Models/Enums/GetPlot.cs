@@ -2,6 +2,6 @@
 {
     public enum GetPlot
     {
-        Short, Full
+        Option1,Short, Full
     }
 }

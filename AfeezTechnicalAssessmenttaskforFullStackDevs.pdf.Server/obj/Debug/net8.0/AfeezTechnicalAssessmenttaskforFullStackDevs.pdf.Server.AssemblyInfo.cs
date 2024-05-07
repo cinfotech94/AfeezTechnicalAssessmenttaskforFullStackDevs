@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AfeezTechnicalAssessmenttaskforFullStackDevs.pdf.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ed2299a75af476717dc251473307d138ce887a99")]
 [assembly: System.Reflection.AssemblyProductAttribute("AfeezTechnicalAssessmenttaskforFullStackDevs.pdf.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AfeezTechnicalAssessmenttaskforFullStackDevs.pdf.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

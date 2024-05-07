@@ -18,13 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\afeeztechnicalassessmenttaskforfullstackdevs.pdf.client\afeeztechnicalassessmenttaskforfullstackdevs.pdf.client.esproj">
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Logging\LogFiles\" />
+    <Folder Include="Cache\Migrations\" />
   </ItemGroup>
 
 </Project>

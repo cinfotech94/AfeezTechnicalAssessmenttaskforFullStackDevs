@@ -28,11 +28,11 @@ namespace AfeezTechnicalAssessmenttaskforFullStackDevs.pdf.Server.Controllers
             string cacheKey = "";
             if (getMDBapi.Title == null)
             {
-                cacheKey = getMDBapi.ImdbId;
+                cacheKey = "getMDBapi" + getMDBapi.ImdbId;
             }
-            else
+            if (getMDBapi.ImdbId == null)
             {
-                cacheKey = getMDBapi.Title;
+                cacheKey = "getMDBapi"+getMDBapi.Title;
             }
             OmdbGetsDataRoot cachedResult = await _cacheService.GetAsync<OmdbGetsDataRoot>(cacheKey);
             if (cachedResult != null)
@@ -41,22 +41,31 @@ namespace AfeezTechnicalAssessmenttaskforFullStackDevs.pdf.Server.Controllers
             }
             string urlAppend = _assesssmentService.ConvertGetDataToLink(getMDBapi);
             OmdbGetsDataRoot omdbGetsDataRoot = await _iomdbapiService.GetMovieDetails(urlAppend);
-            await _cacheService.SetAsync(cacheKey, omdbGetsDataRoot);
+            if(omdbGetsDataRoot.Title != null)
+            {
+                await _cacheService.SetAsync(cacheKey, omdbGetsDataRoot);
+            }
             return Ok(omdbGetsDataRoot);
         }
 
         [HttpGet("SearchMusicMovieSeries")]
         public async Task<IActionResult> SearchMDBapi([FromQuery] SearchMDBapi searchMDBapi)
         {
-                string cacheKey = searchMDBapi.Title;
+                string cacheKey = "SearchMDBapi"+searchMDBapi.Title;
             OmdbSearchResultRoot cachedResult = await _cacheService.GetAsync<OmdbSearchResultRoot>(cacheKey);
-            if (cachedResult != null)
+            if (cachedResult!=null)
             { 
-                return Ok(cachedResult);
+                if(cachedResult.Search.Count() > 0)
+                {
+                    return Ok(cachedResult);
+                }
             }
             string urlAppend = _assesssmentService.ConvertSearchDataToLink(searchMDBapi);
             OmdbSearchResultRoot omdbSearchResultRoot = await _iomdbapiService.SearchMovie(urlAppend);
-            await _cacheService.SetAsync(cacheKey, omdbSearchResultRoot);
+            if(omdbSearchResultRoot != null)
+            {
+                await _cacheService.SetAsync(cacheKey, omdbSearchResultRoot);
+            }
             return Ok(omdbSearchResultRoot);
         }
     }

@@ -25,7 +25,7 @@ namespace AfeezTechnicalAssessmenttaskforFullStackDevs.pdf.Server.Services.Imple
                     string i = request.ImdbId;
                     Response = Response + "&i=" + i;
                 }
-                if (!string.IsNullOrEmpty(request.Type.ToString()))
+                if (request.Type.ToString()!= "Option1")
                 {
                     string type = request.Type.ToString();
                     Response = Response + "&type=" + type;
@@ -35,7 +35,7 @@ namespace AfeezTechnicalAssessmenttaskforFullStackDevs.pdf.Server.Services.Imple
                     string y = request.Year;
                     Response = Response + "&y=" + y;
                 }
-                if (!string.IsNullOrEmpty(request.shortfullplot.ToString()))
+                if (request.shortfullplot.ToString() != "Option1")
                 {
                     string plot = request.shortfullplot.ToString();
                     Response = Response + "&plot=" + plot;
@@ -57,7 +57,7 @@ namespace AfeezTechnicalAssessmenttaskforFullStackDevs.pdf.Server.Services.Imple
                 string title = request.Title;
                 Response = Response + "&s=" + title;
             }
-            if (!string.IsNullOrEmpty(request.Type.ToString()))
+            if (request.Type.ToString() != "Option1")
             {
                 string type = request.Type.ToString();
                 Response = Response + "&type=" + type;
