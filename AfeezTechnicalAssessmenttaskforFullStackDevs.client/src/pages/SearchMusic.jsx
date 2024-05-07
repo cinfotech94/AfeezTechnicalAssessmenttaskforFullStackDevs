@@ -14,7 +14,6 @@ const SearchMusic = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    // Construct the query parameters
     const queryParams = new URLSearchParams({
       Title: title,
       Year: year,
@@ -26,7 +25,6 @@ const SearchMusic = () => {
       const response = await fetch(`https://localhost:7223/TechnicalAssesment/SearchMusicMovieSeries?${queryParams.toString()}`, {
         method: 'GET',
         headers: {
-          // No need to set Content-Type for GET requests
         },
       });
 

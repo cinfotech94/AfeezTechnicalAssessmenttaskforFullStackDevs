@@ -19,15 +19,11 @@ namespace AfeezTechnicalAssessmenttaskforFullStackDevs.pdf.Server.LoggingFiles.L
         {
             try
             {
-                string webRootPath = _env?.ContentRootPath; // Null-conditional operator added
+                string webRootPath = _env?.ContentRootPath;
                 if (webRootPath != null)
                 {
                     string logFile = Path.Combine(webRootPath, "Logging", "LogFiles", "Error.log");
-
-                    // Ensure that the directory exists before writing to the file
                     Directory.CreateDirectory(Path.GetDirectoryName(logFile));
-
-                    // Use using statement to ensure that the StreamWriter is properly disposed
                     using (StreamWriter writer = new StreamWriter(logFile, true))
                     {
                         writer.WriteLine($"Id:{loggingModel.LogId} - ServiceName:{loggingModel.ServiceName} - DateTimeNow: {loggingModel.LogTime} - Error: {loggingModel.ErrorMessage}");
